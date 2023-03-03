@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import css from './Section.module.css';
 
-export const Section = ({ title, children }) => {
+const Section = ({ title, children }) => {
   return (
     <>
       <h2 className={css.title}>{title}</h2>
@@ -12,6 +12,8 @@ export const Section = ({ title, children }) => {
 };
 
 Section.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  title: PropTypes.string,
+  children: PropTypes.any,
 };
+
+export default Section;
